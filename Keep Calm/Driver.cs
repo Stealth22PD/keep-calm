@@ -1,6 +1,6 @@
 ﻿using Rage;
+using Rage.Native;
 using Stealth.Common.Extensions;
-using Stealth.Common.Natives;
 using Stealth.Plugins.KeepCalm.Common;
 using Stealth.Plugins.KeepCalm.Extensions;
 using System;
@@ -16,10 +16,10 @@ namespace Stealth.Plugins.KeepCalm
         {
             Logger.LogTrivialDebug("Starting calm fiber...");
 
-            Functions.CallByHash(0x056E0FE8534C2949, Game.LocalPlayer, false); //SET_ALL_RANDOM_PEDS_FLEE
+            NativeFunction.Natives.x056E0FE8534C2949(Game.LocalPlayer, false); //SET_ALL_RANDOM_PEDS_FLEE
             //Logger.LogTrivialDebug("After SET_ALL_RANDOM_PEDS_FLEE");
 
-            Functions.CallByHash(0x596976B02B6B5700, Game.LocalPlayer, true); //SET_IGNORE_LOW_PRIORITY_SHOCKING_EVENTS
+            NativeFunction.Natives.x596976B02B6B5700(Game.LocalPlayer, true); //SET_IGNORE_LOW_PRIORITY_SHOCKING_EVENTS
             //Logger.LogTrivialDebug("After SET_IGNORE_LOW_PRIORITY_SHOCKING_EVENTS");
 
             while (Globals.IsPluginActive)

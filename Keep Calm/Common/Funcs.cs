@@ -17,8 +17,9 @@ namespace Stealth.Plugins.KeepCalm.Common
             SendAPIWebRequest();
         }
 
-        private static void SendAPIWebRequest(bool beta = false)
+        private static void SendAPIWebRequest()
         {
+            bool beta = false;
             string mApiURL = string.Format("http://www.lcpdfr.com/applications/downloadsng/interface/api.php?do=checkForUpdates&fileId={0}&beta={1}&textOnly=1", Globals.cLCPDFRDownloadID, beta.ToString());
             string mApiString = "";
 
@@ -77,12 +78,12 @@ namespace Stealth.Plugins.KeepCalm.Common
 
         public static bool IsCommonDLLValid()
         {
-            return CheckAssemblyVersion("Stealth.Common.dll", "Stealth.Common DLL", "1.6.0.1");
+            return CheckAssemblyVersion("Stealth.Common.dll", "Stealth.Common DLL", "2.0.6684.38422");
         }
 
         public static bool IsRPHVersionRecentEnough()
         {
-            return CheckAssemblyVersion("RAGEPluginHook.exe", "RAGE Plugin Hook", "0.41.965.8352");
+            return CheckAssemblyVersion("RAGEPluginHook.exe", "RAGE Plugin Hook", "0.62.1216.14731");
         }
 
         public static bool IsLSPDFRVersionRecentEnough()

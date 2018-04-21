@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
   <?define Keep Calm_TargetDir=$(var.Keep Calm.TargetDir)?>
-  <Product Id="*" Name="Keep Calm" Language="1033" Version="1.0.0.0" Manufacturer="Stealth22" UpgradeCode="c6112c4a-a598-4b88-88c1-0ca7a3aac3be">
+  <Product Id="*" Name="Keep Calm" Language="1033" Version="1.1.0.0" Manufacturer="Stealth22" UpgradeCode="c6112c4a-a598-4b88-88c1-0ca7a3aac3be">
     <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" Platform="x64" />
 
     <MajorUpgrade AllowSameVersionUpgrades="yes" DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
